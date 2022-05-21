@@ -1,0 +1,62 @@
+@import "./variables.scss";
+
+.app {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 100vw;
+    height: 100vh;
+
+    overflow: hi;
+
+    &__cmd {
+        position: absolute;
+        width: 800px;
+
+        &__header {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            color: $secd;
+            background-color: #585252;
+
+            height: 25px;
+            padding: 0 8px;
+            border-top-left-radius: 5px;
+            border-top-right-radius: 5px;
+
+            cursor: move;
+        }
+
+        &__body {
+            background-color: #000;
+
+            height: 600 - 25 - 8*2px;
+            padding: 8px;
+            border-bottom-left-radius: 5px;
+            border-bottom-right-radius: 5px;
+
+            overflow-x: hidden;
+            overflow-y:auto;
+
+            &__input {
+                background-color: #000;
+                color: $light;
+
+                border-width: 0;
+
+                font-family: inherit;
+                font-size: inherit;
+
+
+                &:focus {
+                    outline: transparent;
+                    //color: blue;
+
+                }
+            }
+        }
+    }
+}
