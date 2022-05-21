@@ -12,7 +12,7 @@
 
     &__cmd {
         position: absolute;
-        width: 800px;
+        width: 960px;
 
         &__header {
             display: flex;
@@ -33,7 +33,7 @@
         &__body {
             background-color: #000;
 
-            height: 600 - 25 - 8*2px;
+            height: 720 - 25 - 8*2px;
             padding: 8px;
             border-bottom-left-radius: 5px;
             border-bottom-right-radius: 5px;
@@ -43,7 +43,7 @@
 
             &__input {
                 background-color: #000;
-                color: $light;
+                color: inherit;
 
                 border-width: 0;
 

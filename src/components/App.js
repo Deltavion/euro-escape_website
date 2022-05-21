@@ -1,25 +1,33 @@
-import React, { useEffect, useState } from 'react';
+import React, { createRef, useEffect } from 'react';
 import styles from '../styles/app.module.scss';
 
 import Draggable from 'react-draggable';
 
 function App() {
+    const windowSize = [960, 720];
+    const cmdDivRef = createRef()
 
     useEffect(() => {
-        document.addEventListener("mousedown", (e) => {
-            console.log(e);
+        cmdDivRef.addEventListener("mousedown", (e) => {
+            console.log("cmddiv hitted")
+        })
+
+        document.addEventListener("keypress", (e) => {
+            if (e.key === 'Enter')
+                console.log(e);
         })
     })
 
     return (
         <div className={styles.app}>
             <Draggable
+                ref={cmdDivRef}
                 handle="#header"
                 bounds={{
-                    left: - (window.screen.width / 2 - 800 / 2),
-                    top: - (window.screen.height / 2 - 600 / 2),
-                    right: window.screen.width / 2 - 800 / 2,
-                    bottom: window.screen.height / 2 - 600 / 2
+                    left: - (window.screen.width / 2 - windowSize[0] / 2),
+                    top: - (window.screen.height / 2 - windowSize[1] / 2),
+                    right: window.screen.width / 2 - windowSize[0] / 2,
+                    bottom: window.screen.height / 2 - windowSize[1] / 2
                 }}
             >
                 <div className={styles.app__cmd}>
