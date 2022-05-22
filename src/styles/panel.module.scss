@@ -1,0 +1,32 @@
+@import "./variables.scss";
+
+.panel {
+    position: absolute;
+    width: 960px;
+    z-index: 0;
+
+    &__header {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        color: $secd;
+        background-color: #585252;
+
+        height: 25px;
+        padding: 0 8px;
+        border-top-left-radius: 5px;
+        border-top-right-radius: 5px;
+
+        cursor: move;
+    }
+
+    &__body {
+        background-color: #eee;
+
+        height: 720 - 25 - 8*2px;
+        padding: 8px;
+        border-bottom-left-radius: 5px;
+        border-bottom-right-radius: 5px;
+    }
+}
